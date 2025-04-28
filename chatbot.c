@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-// Declaração da função Consulta
 void Consulta();
+void InformacoesPlanoSaude();
+void EspecialidadesMedicasDisponiveis();
 
 int main() {
     int opcao = 0;
@@ -19,13 +20,13 @@ int main() {
             Consulta();
             break;
         case 2:
-            printf("Voce escolheu informacoes sobre nosso plano de saude.\n");
+            InformacoesPlanoSaude();
             break;
         case 3:
-            printf("Voce escolheu ver especialidades medicas disponiveis.\n");
+            EspecialidadesMedicasDisponiveis();
             break;
         default:
-            printf("Opcao invalida. Tente novamente.\n");
+            printf("\nOpcao invalida!\n");
             break;
     }
 
@@ -35,7 +36,7 @@ int main() {
 void Consulta() {
     char nome[50], especialidade[50], data[11], horario[6];
 
-    printf("Ola! Vamos agendar sua consulta.\n");
+    printf("\nOla! Vamos agendar sua consulta.\n");
 
     printf("Qual seu nome completo? ");
     scanf("%s", nome);
@@ -54,4 +55,25 @@ void Consulta() {
     printf("- Especialidade: %s \n", especialidade);
     printf("- Data: %s \n", data);
     printf("- Horario: %s \n", horario);
+}
+
+void InformacoesPlanoSaude(){
+    printf("\n--- Informacoes sobre Planos de Saude ---\n");
+    printf("- Planos a partir de R$199,00 mensais.\n");
+    printf("- Cobertura nacional.\n");
+    printf("- Consultas ilimitadas.\n");
+    printf("- Exames laboratoriais inclusos.\n");
+    printf("- Atendimento de emergencia 24h.\n");
+    printf("- Carencia: 24h para emergencias, 30 dias para consultas.\n");
+    printf("- Aplicativo para agendamentos online.\n");
+}
+
+void EspecialidadesMedicasDisponiveis(){
+    printf("\n--- Especialidades Medicas Disponiveis ---\n");
+    printf("- Clinica Geral\n");
+    printf("- Cardiologia\n");
+    printf("- Dermatologia\n");
+    printf("- Ortopedia\n");
+    printf("- Pediatria\n");
+    printf("- Ginecologia\n");
 }
